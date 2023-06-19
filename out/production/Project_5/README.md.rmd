@@ -1,0 +1,127 @@
+# PROJECT 5 Graphical Adventure Game
+
+## Overview
+### This project is a dungeon game where a dungeon consists of number of caves and tunnels are interconnected to each other. The user gives the height, width, interconnectivity, wrapping or non wrapping, percentage of caves for treasure and difficulty level information of the dungeon. A tunnel has only 2 exits. A start and end cave is randomly generated and the player starts at the starting location, moves from one location to another and checks for directions to move. Player collects treasure and arrow on the way to reach the destination. The dungeon has monsters in caves. Player is supposed to shoot these monsters. A player smells something when there is a monster nearby. If the player shoots otyugh he is free to move otherwise the monster kills the player. The project used mvc model architecture.
+
+## List of Features
+### This game has a main class which interacts with user by running controller for the GUI game or console based game.
+### DungeonModel is the main interface which is implemented by dungeon class. The game takes place in this class.
+### Location interface is implemented by cave class. All the functionalities of a location are in this class.
+### GamePlayer interface is implemented by Player. All the functionalities of a player are in this class.
+### Weapon interface is implemented by Arrow. This class gives the arrow location.
+### Monster interface is implemented by Otyugh. All the functionalities of an Otyugh are implemented in this class.
+### BreadthFirstSearch class is used to implement BFS.
+### Graph class is used to implement is used to implement Kruskal.
+### DungeonController interface is implemented by DungeonConsoleController. The model is passed to the controller. This controller is used for console based game.  
+### ViewController interface is implemented by DungeonViewController. This controller is used for view based game.
+
+## How to run
+### The out directory contains an artifacts directory which has the Project5_jar folder. Go inside the folder and run the .jar file by writing "console" for console based and "gui" for display.
+
+## How to use
+### GUI game
+### The Game Settings menu opens a window and asks user to enter height, width, interconnectivity, if the dungeon is wrapping or not, the percentage of caves the treasure, arrows should be in and number of monsters. After clicking the create dungeon button, the player will appear on the screen. User can move the player by pressing arrow keys or clicking on adjacent locaitons. User can pick the treasure by pressing P. User can shoot the arrow using CTRL + arrow keys. A window will pop where we can enter the distance. Status of the player will be displayed on the right screen.  
+### Console game
+### The game asks user to enter height, width, interconnectivity, if the dungeon is wrapping or not, the percentage of caves the treasure, arrows should be in and number of monsters. A menu will be displayed and the user has to enter the choice. Accordingly, the user enters the direction or distance for the player move and arrow travel. 
+
+##Description of examples
+## Console
+### Run 1
+### First example is for player navigation
+### Enter the height, width, interconnectivity, non-wrapping, percentage of caves with treasure and number of Otyughs.
+### Menu is displayed and the user has to choose.
+### The user chooses first option and enters the direction.
+### This way player can keep moving unless he/she is killed by an Otyugh.
+
+### Run 2
+### Second example is for player picking up treasure.
+### Enter the height, width, interconnectivity, non-wrapping, percentage of caves with treasure and number of Otyughs.
+### A starting point and destination point is randomly selected.
+### Menu is displayed and the user has to choose.
+### The user chooses first option and enters the direction.
+### This way player can keep moving and collecting treasure.
+### The count of the treasure can be known by choosing option 3. 
+
+### Run 3
+### Third example is for picking up arrows
+### Enter the height, width, interconnectivity, non-wrapping, percentage of caves with treasure and number of Otyughs.
+### A starting point and destination point is randomly selected.
+### Menu is displayed and the user has to choose.
+### The user chooses first option and enters the direction.
+### This way player can keep moving and collecting arrows. He already has 3.
+### The count of the arrows can be known by choosing option 4.
+
+### Run 4
+### Fourth example is for player to be eaten.
+### Enter the height, width, interconnectivity, non-wrapping, percentage of caves with treasure and number of Otyughs.
+### A starting point and destination point is randomly selected.
+### Menu is displayed and the user has to choose.
+### The user chooses first option and enters the direction.
+### This way player can keep moving in the dungeon.
+### The player walks into a dungeon which has Otyugh without killing it and is eaten by the Otyugh.
+
+### Run 5
+### Fifth example is for player killing Otyugh
+### Enter the height, width, interconnectivity, non-wrapping, percentage of caves with treasure and number of Otyughs.
+### A starting point and destination point is randomly selected.
+### Menu is displayed and the user has to choose.
+### The user chooses first option and enters the direction.
+### This way player can keep moving in the dungeon.
+### The player smells a less pungent odour.
+### The player shoots an arrow which hits the Otyugh and he is injured.
+### The player shoots an arrow again and the Otyugh is dead.
+
+### Run 6
+### Sixth example is for player killing Otyugh
+### Enter the height, width, interconnectivity, non-wrapping, percentage of caves with treasure and number of Otyughs.
+### A starting point and destination point is randomly selected.
+### Menu is displayed and the user has to choose.
+### The user chooses first option and enters the direction.
+### This way player can keep moving in the dungeon.
+### The player smells a less pungent odour.
+### The player shoots an arrow which hits the Otyugh and he is injured.
+### The player shoots an arrow again and the Otyugh is dead.
+### This way the player can keep killing monsters and moving ahead.
+### The player kills the Otyugh at the destination and the player wins.
+
+## Description of screenshot
+### Screenshot 1
+### Values to enter for dungeon creation.
+
+### Screenshot 2
+### Arrows and smell visible in dungeon and player has collected arrows.
+
+### Screenshot 3
+### Player killed by Otyugh.
+
+
+## Design changes
+### Gave an option to the player to collect the treasure.
+### Created dungeon with random left over edges.
+
+## Assumptions
+### 1. Since there is only one player in the game, the count of treasure collected is stored in the game.
+### 2. If player has only moved, the status of moving is not displayed as it is visible to the user.
+
+## Limitations
+### 1. BFS can increase time and space complexity.
+
+## Citation
+### www.stackoverflow.com
+### www.GeeksforGeeks.com
+### www.javatpoint.com
+### https://docs.oracle.com/javase/tutorial/uiswing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
